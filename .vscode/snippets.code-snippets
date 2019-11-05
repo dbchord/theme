@@ -1,0 +1,9 @@
+{
+	"import dependency": {
+		"prefix": "import",
+		"body": [
+			"import {  } from '$1';"
+		],
+		"description": "Import Dependency"
+	}
+}

@@ -1,0 +1,51 @@
+<article class='pa'>
+  <!-- Header -->
+  <header class='ph'>
+    <!-- Homepage  -->
+    <b:if cond='{{view.home}}'>
+      <h1 class='pt'>{{msg.home}}</h1>
+    </b:if>
+
+    <!-- Search (label) page  -->
+    <b:if cond='{{view.label}}'>
+      <h2 class='pt'>{{view2.search.label}}</h2>
+    </b:if>
+
+    <!-- Search (query) page  -->
+    <b:if cond='{{view.query}}'>
+      <h2 class='pt'>{{view2.search.query}}</h2>
+    </b:if>
+
+    <!-- Search (default) page  -->
+    <b:if cond='{{view.dafault}}'>
+      <h2 class='pt'><data:blog.title/></h2>
+    </b:if>
+
+    <!-- Archive page  -->
+    <b:if cond='{{view.archive}}'>
+      <h2 class='pt'><data:view.archive.rangeMessage/></h2>
+    </b:if>
+  </header>
+  <!-- Back Language  -->
+  <b:include name='back-language'/>
+  <b:if cond='data:posts.size lt 1'>
+    <div class='sm smw' role='alert'>
+      {{msg.theresNothingHere}}
+    </div>
+    <b:else/>
+    <!-- List Group -->
+    <ul class='lg'>
+      {{cond.space}}
+      <b:loop values='data:posts' var='post'>
+        <li class='lgi'>
+          <b:with value='{{cond.post.title}}' var='title'>
+            <a expr:href='{{cond.post.url}}' expr:aria-label='{{cond.chord.title}}' expr:title='{{cond.chord.title}}'>
+              {{cond.space}}
+              <b:eval expr='data:title'/>
+            </a>
+          </b:with>
+        </li>
+      </b:loop>
+    </ul>
+  </b:if>
+</article>

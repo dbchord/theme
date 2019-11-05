@@ -1,0 +1,7 @@
+<b:includable id='custom-all-head-content'>
+  <!--(bake header/required.xml)-->
+  <!--(bake header/title.xml)-->
+  <!--(bake header/default.xml)-->
+  <!--(bake header/facebook.xml)-->
+  <!--(bake header/twitter.xml)-->
+</b:includable>

@@ -1,0 +1,7 @@
+<b:if cond='{{cond.lang}}'>
+  <h2>Petunjuk dan Cara Memainkan Kord Gitar <data:title/></h2>
+  <p>Selamat datang kembali lagi di DB Chord, website informasi terupdate seputar lirik dan chord gitar terlengkap dan terbaik #1. Kali ini Kami memposting tutorial atau artikel Kunci Gitar <data:title/>. Sebelum lebih jauh Anda melihat <strong>Kord <data:title/></strong>, Kami akan sedikit memberitahu Anda cara memainkannya:</p>
+  <b:else/>
+  <h2>How to Play Guitar Chords <data:title/></h2>
+  <p>Welcome back to DB Chord, This is for those of you who are about to start learn guitar, this time we published song chords <data:title/>. We will describe how to use this <strong>guitar chords <data:title/></strong>:</p>
+</b:if>

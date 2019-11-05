@@ -1,0 +1,16 @@
+<header class='hd' id='header'>
+  <div class='con'>
+    <div class='hdi'>
+      <b:tag expr:name='{{cond.header}}' class='hdt'>
+        <a class='hdl' expr:href='{{blog2.homepageUrl}}'>
+          <b:class cond='{{view.home}}' name='ac'/>
+          {{cond.space}}
+          {{blog.title}}
+        </a>
+      </b:tag>
+      <b:section class='hds' id='hd' showaddelement='no'>
+        <!--(bake widgets/PageList1.xml)-->
+      </b:section>
+    </div>
+  </div>
+</header>

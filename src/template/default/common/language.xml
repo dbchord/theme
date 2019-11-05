@@ -1,0 +1,6 @@
+<!-- Back Language  -->
+<b:includable id='back-language'>
+  <b:if cond='{{cond.lang2}}'>
+    <div class='sm sml' role='alert'>Switch to <a expr:href='{{cond.langUrl}}'>Indonesian Language</a></div>
+  </b:if>
+</b:includable>

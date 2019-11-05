@@ -1,0 +1,58 @@
+//
+// Footer class
+//
+
+// Usages
+// ----------------------------------------------------
+// ft = footer
+// fti = footer item
+// ftt = footer text
+// ----------------------------------------------------
+
+// ft = footer
+.ft {
+  width: 100%;
+
+  // con = container
+  .con {
+    padding: .75rem 0;
+    font-size: .875rem;
+    color: #fff;
+    background-color: $primary;
+    border-top: .1rem solid #ff0202;
+  }
+}
+
+// fti = footer item
+.fti {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+// ftt = footer text
+.ftt {
+  margin: .5rem auto 0;
+
+  a {
+    color: $white;
+    &:hover,
+    &:focus {
+      color: #cecece;
+    }
+  }
+}
+
+//
+// Footer Nav
+// fn
+//
+
+.fn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0 0 .5rem;
+  list-style: none;
+}

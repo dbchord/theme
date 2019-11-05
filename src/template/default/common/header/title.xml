@@ -1,0 +1,41 @@
+<!-- Homepage  -->
+<b:if cond='{{view.home}}'>
+  <title><data:blog.title/></title>
+</b:if>
+
+<!-- Search (label) page  -->
+<b:if cond='{{view.label}}'>
+  <title><data:blog.pageName/> | <data:blog.title/></title>
+</b:if>
+
+<!-- Search (query) page  -->
+<b:if cond='{{view.query}}'>
+  <title><data:view.search.resultsMessage/> | <data:blog.title/></title>
+</b:if>
+
+<!-- Search (default) page  -->
+<b:if cond='{{view.dafault}}'>
+  <title><data:blog.title/></title>
+</b:if>
+
+<!-- Archive page  -->
+<b:if cond='{{view.archive}}'>
+  <title><data:view.archive.rangeMessage/> | <data:blog.title/></title>
+</b:if>
+
+<!-- Item page  -->
+<b:if cond='{{view.post}}'>
+  <b:with value='{{cond.title}}' var='title'>
+    <title><b:eval expr='{{cond.chord.title}}'/> | <data:blog.title/></title>
+  </b:with>
+</b:if>
+
+<!-- Static page  -->
+<b:if cond='{{view.page}}'>
+  <title><b:eval expr='{{cond.title}}'/> | <data:blog.title/></title>
+</b:if>
+
+<!-- Error page  -->
+<b:if cond='{{view.error}}'>
+  <title>404 | <data:blog.title/></title>
+</b:if>

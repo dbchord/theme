@@ -1,0 +1,92 @@
+<b:if cond='{{view.home}}'>
+  <meta content='summary_large_image' name='twitter:card'/>
+  <b:else/>
+  <meta content='summary' name='twitter:card'/>
+</b:if>
+<meta content='{{config.twitter.site}}' name='twitter:creator'/>
+<meta content='{{config.twitter.creator}}' name='twitter:site'/>
+<meta expr:content='data:view.url.canonical' name='twitter:url'/>
+
+<!-- Homepage  -->
+<b:if cond='{{view.home}}'>
+  <meta expr:content='data:blog.title' name='twitter:title'/>
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' name='twitter:description'/>
+    <b:else/>
+    <meta expr:content='data:blog.title' name='twitter:description'/>
+  </b:if>
+  <meta content='{{config.opengraph.image}}' property='twitter:image'/>
+</b:if>
+
+<!-- Item page  -->
+<b:if cond='{{view.post}}'>
+  <meta expr:content='({{cond.title}}) + " | " + data:blog.title' name='twitter:title'/>
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' name='twitter:description'/>
+    <b:else/>
+    <meta expr:content='data:blog.pageName ? data:blog.pageName : data:blog.title' name='twitter:description'/>
+  </b:if>
+  <b:if cond='data:view.featuredImage'>
+    <meta expr:content='resizeImage(data:view.featuredImage, 1200, "1200:630")' property='twitter:image'/>
+    <b:elseif cond='data:blog.postImageUrl'/>
+    <meta expr:content='resizeImage(data:blog.postImageUrl, 1200, "1200:630")' property='twitter:image'/>
+    <b:else/>
+    <meta content='{{config.opengraph.image}}' property='twitter:image'/>
+  </b:if>
+</b:if>
+
+<!-- Static page  -->
+<b:if cond='{{view.page}}'>
+  <meta expr:content='({{cond.title}}) + " | " + data:blog.title' name='twitter:title'/>
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' name='twitter:description'/>
+    <b:else/>
+    <meta expr:content='data:blog.pageName ? data:blog.pageName : data:blog.title' name='twitter:description'/>
+  </b:if>
+  <b:if cond='data:view.featuredImage'>
+    <meta expr:content='resizeImage(data:view.featuredImage, 1200, "1200:630")' property='twitter:image'/>
+    <b:elseif cond='data:blog.postImageUrl'/>
+    <meta expr:content='resizeImage(data:blog.postImageUrl, 1200, "1200:630")' property='twitter:image'/>
+    <b:else/>
+    <meta content='{{config.opengraph.image}}' property='twitter:image'/>
+  </b:if>
+</b:if>
+
+<!-- Search (label) page  -->
+<b:if cond='{{view.label}}'>
+  <meta expr:content='data:blog.pageName + " | " + data:blog.title' name='twitter:title'/>
+  <meta expr:content='data:view.search.resultsMessage' name='twitter:description'/>
+  <meta content='{{config.opengraph.image}}' property='twitter:image'/>
+</b:if>
+
+<!-- Search (query) page  -->
+<b:if cond='{{view.query}}'>
+  <meta expr:content='data:view.search.resultsMessage + " | " + data:blog.title' name='twitter:title'/>
+  <meta expr:content='data:view.search.resultsMessage' name='twitter:description'/>
+  <meta content='{{config.opengraph.image}}' property='twitter:image'/>
+</b:if>
+
+<!-- Search (default) page  -->
+<b:if cond='{{view.dafault}}'>
+  <meta expr:content='data:blog.title' name='twitter:title'/>
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' name='twitter:description'/>
+    <b:else/>
+    <meta expr:content='data:blog.title' name='twitter:description'/>
+  </b:if>
+  <meta content='{{config.opengraph.image}}' property='twitter:image'/>
+</b:if>
+
+<!-- Archive page  -->
+<b:if cond='{{view.archive}}'>
+  <meta expr:content='data:view.archive.rangeMessage + " | " + data:blog.title' name='twitter:title'/>
+  <meta expr:content='data:view.archive.rangeMessage' name='twitter:description'/>
+  <meta content='{{config.opengraph.image}}' property='twitter:image'/>
+</b:if>
+
+<!-- Error page  -->
+<b:if cond='{{view.error}}'>
+  <meta expr:content='"404 | " + data:blog.title' name='twitter:title'/>
+  <meta content='404' name='twitter:description'/>
+  <meta content='{{config.opengraph.image}}' property='twitter:image'/>
+</b:if>

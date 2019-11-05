@@ -1,0 +1,113 @@
+//
+// Base CSS
+//
+
+//= Color system
+
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$white: #fff !default;
+$black: #000 !default;
+
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #9c4dcc !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+$primary: #455a64 !default;
+$primary-dark: #41595d !default;
+$primary-light: #e9ecef !default;
+
+//= Body
+// stylelint-disable-next-line value-keyword-case
+$body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol" !default;
+$body-font-size: 1rem !default;
+$body-font-weight: 400 !default;
+$body-line-height: 1.5 !default;
+$body-color: $primary-dark !default;
+$body-bg: $primary-light !default;
+
+//= Links
+$link-color: $primary !default;
+$link-hover-color: darken($primary-dark, 15%) !default;
+$link-decoration: none !default;
+$link-hover-decoration: none !default;
+
+//= Headings
+
+$headings-font-family: null !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: null !default;
+
+$h1-font-size: 2rem !default;
+$h2-font-size: 1.75rem !default;
+$h3-font-size: 1.5rem !default;
+$h4-font-size: 1.25rem !default;
+$h5-font-size: 1rem !default;
+$h6-font-size: .75rem !default;
+
+// Post
+$post-title: $h4-font-size !default;
+
+// Border
+$border-radius: .25rem !default;
+$border-width: 1px !default;
+$border-color: $gray-300 !default;
+
+// List group
+$list-group-color:                  null !default;
+$list-group-bg:                     $white !default;
+$list-group-border-color:           1px solid rgba(0, 0, 0, .12549019607843137) !default;
+$list-group-border-width:           $border-width !default;
+$list-group-border-radius:          $border-radius !default;
+
+//
+// Breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+//
+// Grid
+//
+
+//= cons
+//
+// Define the maximum width of `.con` for different screen sizes.
+
+$con-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+//= Columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 1rem !default;

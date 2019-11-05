@@ -1,0 +1,10 @@
+<b:if cond='{{view.mobile}}'>
+  <div class='pbn sm smw' role='alert'>
+    {{cond.space}}
+    <b:if cond='{{cond.lang}}'>
+      Maaf! Saat ini Anda menggunakan tampilan versi AMP (⚡) yang dikhususkan untuk mempercepat loading website. Karenanya, tombol chord di atas tidak akan berfungsi, jika Anda ingin menggunakan fitur transpose chord, auto scroll dan merubah ukuran font, silahkan klik link berikut:&amp;nbsp;<a expr:href='data:view.url params {m: 0}' expr:aria-label='"Versi Lengkap Kunci Gitar " + data:title'><b:eval expr='"Kunci Gitar " + data:title + " Versi Lengkap"'/></a>
+      <b:else/>
+      Sorry! You are using AMP version website (⚡) for fastest load data. Some features such as transpose, auto scroll, change font size not allowed, if you want to see original version, please click this link:&amp;nbsp;<a expr:href='data:view.url params {m: 0}' expr:aria-label='"Guitar Chords Original Version " + data:title'><b:eval expr='"Guitar Chords " + data:title + " Original Version"'/></a>
+    </b:if>
+  </div>
+</b:if>

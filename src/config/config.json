@@ -1,0 +1,21 @@
+{
+  "opengraph": {
+    "image": "https://example.com/1200x630.png"
+  },
+  "facebook": {
+    "username": "dbchord",
+    "app_id": "12345",
+    "admins": "12345",
+    "pages": "12345"
+  },
+  "twitter": {
+    "username": "dbchords",
+    "site": "@dbchords",
+    "creator": "@dbchords"
+  },
+  "pinterest": {
+    "username": "dbchord",
+    "board": "@dbchords",
+    "creator": "@dbchords"
+  }
+}

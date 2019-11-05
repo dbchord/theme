@@ -1,0 +1,37 @@
+{
+  "lang": "data:blog.localeUnderscoreDelimited == \"id\"",
+  "lang2": "data:blog.localeUnderscoreDelimited != \"id\"",
+  "langUrl": "data:blog.isMobileRequest ? data:view.url.canonical params { m: 1 } : data:view.url.canonical",
+  "canonical": "data:blog.locale.country ? data:blog.locale.language + \"_\" + data:blog.locale.country : data:blog.locale.language",
+  "title": "data:blog.pageName ? data:blog.pageName : data:messages.noTitle",
+  "header": "data:view.isHomepage ? \"h1\" : \"h2\"",
+  "body": "data:post.body ? data:post.body : data:messages.theresNothingHere",
+  "body-2": "data:post.body",
+  "manipulate1": "&lt;head&gt;",
+  "manipulate2": "&lt;/head&gt;&lt;body&gt;",
+  "manipulate3": "&lt;!--<head/><body/>--&gt;&lt;/body&gt;",
+  "space": "<b:attr name='b:whitespace' value='remove'/>",
+  "html": {
+    "dir": "data:blog.languageDirection",
+    "lang": "data:blog.locale",
+    "xmlns": "http://www.w3.org/1999/xhtml",
+    "xmlns:b": "http://www.google.com/2005/gml/b",
+    "xmlns:data": "http://www.google.com/2005/gml/data",
+    "xmlns:expr": "http://www.google.com/2005/gml/expr",
+    "mobile": "⚡",
+    "index": "og: http://ogp.me/ns# website: http://ogp.me/ns/website# fb: http://ogp.me/ns/fb#",
+    "single": "og: http://ogp.me/ns# article: http://ogp.me/ns/article# fb: http://ogp.me/ns/fb#"
+  },
+  "index": {
+    "header": "data:view.isHomepage ? \"h2\" : \"h1\""
+  },
+  "post": {
+    "title": "data:post.title ? data:post.title : data:messages.noTitle",
+    "url": "data:post.link ?: data:post.url"
+  },
+  "chord": {
+    "title": "data:blog.localeUnderscoreDelimited == \"id\" ? \"Kunci Gitar \" + data:title : \"Guitar Chords \" + data:title",
+    "title-2": "data:blog.localeUnderscoreDelimited == \"id\" ? \"Chord Gitar \" + data:title : \"Song Chords \" + data:title",
+    "title-3": "data:blog.localeUnderscoreDelimited == \"id\" ? \"Chord Kunci Gitar \" + data:title : \"Song Guitar Chords \" + data:title"
+  }
+}

@@ -1,0 +1,59 @@
+/* stylelint-disable selector-no-qualifying-type, selector-max-id */
+body#layout .con::after,
+body#layout .section::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+body#layout .l-m-col-1,
+body#layout .l-m-col-2,
+body#layout .l-m-col-3,
+body#layout .l-m-col-4,
+body#layout .l-m-col-5,
+body#layout .l-m-col-6,
+body#layout .l-m-col-7,
+body#layout .l-m-col-8,
+body#layout .l-m-col-9,
+body#layout .l-m-col-10,
+body#layout .l-m-col-11,
+body#layout .l-m-col-12 {
+  position: relative;
+  float: left;
+}
+body#layout .l-m-col-1 {
+  width: 8.33333333%;
+}
+body#layout .l-m-col-2 {
+  width: 16.66666667%;
+}
+body#layout .l-m-col-3 {
+  width: 25%;
+}
+body#layout .l-m-col-4 {
+  width: 33.33333333%;
+}
+body#layout .l-m-col-5 {
+  width: 41.66666667%;
+}
+body#layout .l-m-col-6 {
+  width: 50%;
+}
+body#layout .l-m-col-7 {
+  width: 58.33333333%;
+}
+body#layout .l-m-col-8 {
+  width: 66.66666667%;
+}
+body#layout .l-m-col-9 {
+  width: 75%;
+}
+body#layout .l-m-col-10 {
+  width: 83.33333333%;
+}
+body#layout .l-m-col-11 {
+  width: 91.66666667%;
+}
+body#layout .l-m-col-12 {
+  width: 100%;
+}

@@ -1,0 +1,90 @@
+<meta content='blogger' name='generator'/>
+<link expr:href='{{blog2.blogspotFaviconUrl}}' rel='icon' type='image/x-icon'/>
+
+<!-- <data:blog.feedLinks/> -->
+
+<b:if cond='{{cond.lang}}'>
+  <link expr:href='{{view.urlCanonical}}' rel='canonical'/>
+  <link expr:href='{{view.urlCanonical}} params { m: 1 }' rel='amphtml'/>
+  <b:else/>
+  <b:with value='{{cond.canonical}}' var='url'>
+    <link expr:href='{{view.urlCanonical}} params { hl: data:url }' rel='canonical'/>
+    <link expr:href='{{view.urlCanonical}} params { hl: data:url, m: 1 }' rel='amphtml'/>
+  </b:with>
+</b:if>
+
+<!-- Homepage -->
+<b:if cond='{{view.home}}'>
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' name='description'/>
+    <b:else/>
+    <meta expr:content='data:blog.title' name='description'/>
+  </b:if>
+  <link href='https://example.com/1200x630.png' rel='image_src'/>
+</b:if>
+
+<!-- Item page -->
+<b:if cond='{{view.post}}'>
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' name='description'/>
+    <b:else/>
+    <meta expr:content='data:blog.pageName ? data:blog.pageName : data:blog.title' name='description'/>
+  </b:if>
+  <b:if cond='data:view.featuredImage'>
+    <link expr:href='resizeImage(data:view.featuredImage, 1200, "1200:630")' rel='image_src'/>
+    <b:elseif cond='data:blog.postImageUrl'/>
+    <link expr:href='resizeImage(data:blog.postImageUrl, 1200, "1200:630")' rel='image_src'/>
+    <b:else/>
+    <link href='https://example.com/1200x630.png' rel='image_src'/>
+  </b:if>
+</b:if>
+
+<!-- Static page -->
+<b:if cond='{{view.page}}'>
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' name='description'/>
+    <b:else/>
+    <meta expr:content='data:blog.pageName ? data:blog.pageName : data:blog.title' name='description'/>
+  </b:if>
+  <b:if cond='data:view.featuredImage'>
+    <link expr:href='resizeImage(data:view.featuredImage, 1200, "1200:630")' rel='image_src'/>
+    <b:elseif cond='data:blog.postImageUrl'/>
+    <link expr:href='resizeImage(data:blog.postImageUrl, 1200, "1200:630")' rel='image_src'/>
+    <b:else/>
+    <link href='https://example.com/1200x630.png' rel='image_src'/>
+  </b:if>
+</b:if>
+
+<!-- Search (label) page -->
+<b:if cond='{{view.label}}'>
+  <meta expr:content='data:view.search.resultsMessage' name='description'/>
+  <link href='https://example.com/1200x630.png' rel='image_src'/>
+</b:if>
+
+<!-- Search (query) page -->
+<b:if cond='{{view.query}}'>
+  <meta expr:content='data:view.search.resultsMessage' name='description'/>
+  <link href='https://example.com/1200x630.png' rel='image_src'/>
+</b:if>
+
+<!-- Search (default) page -->
+<b:if cond='{{view.dafault}}'>
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' name='description'/>
+    <b:else/>
+    <meta expr:content='data:blog.title' name='description'/>
+  </b:if>
+  <link href='https://example.com/1200x630.png' rel='image_src'/>
+</b:if>
+
+<!-- Archive page -->
+<b:if cond='{{view.archive}}'>
+  <meta expr:content='data:view.archive.rangeMessage' name='description'/>
+  <link href='https://example.com/1200x630.png' rel='image_src'/>
+</b:if>
+
+<!-- Error page -->
+<b:if cond='{{view.error}}'>
+  <meta content='404' name='description'/>
+  <link href='https://example.com/1200x630.png' rel='image_src'/>
+</b:if>

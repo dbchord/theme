@@ -1,0 +1,30 @@
+//
+// Footer Nav List
+//
+
+// Usages
+// ----------------------------------------------------
+// fnl = footer nav list
+// ----------------------------------------------------
+
+// fnl = footer nav list
+.fnl {
+  a {
+    font-weight: 400;
+    color: #cecece;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+  &:not(:first-child)::before {
+    padding-right: .75rem;
+    padding-left: .25rem;
+    content: "\00b7";
+  }
+  &:not(:first-child):not(:last-child) {
+    margin-right: .5rem;
+    margin-left: .5rem;
+  }
+}

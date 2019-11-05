@@ -1,0 +1,25 @@
+<div class='mc' id='main-content'>
+  <div class='con'>
+    <div class='mci'>
+      <div class='row'>
+        <!-- Main  -->
+        <main class='main col-lg-8 l-m-col-8' id='main'>
+          <div class='mcb'>
+            <b:section class='mcbs' id='mcbs' showaddelement='no'>
+              <!--(bake content/content.xml)-->
+            </b:section>
+          </div>
+        </main>
+        <!-- Sidebar  -->
+        <aside class='col-lg-4 l-m-col-4' id='sidebar'>
+          <div class='mcs'>
+            <b:section class='mcss' id='mcss'>
+              <!--(bake sidebar/BlogSearch1.xml)-->
+              <!--(bake sidebar/PopularPosts1.xml)-->
+            </b:section>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>

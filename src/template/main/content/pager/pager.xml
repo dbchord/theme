@@ -1,0 +1,23 @@
+<nav class='pg' id='page-nav'>
+  <b:tag expr:name='data:newerPageUrl ? "a" : "span"' class='pgl'>
+    <b:class cond='!data:newerPageUrl' name='pgd'/>
+    <b:attr expr:value='data:newerPageUrl ?: ""' name='href'/>
+    <b:attr expr:value='data:newerPageUrl ? {{msg2.newerPosts}} : ""' name='aria-label'/>
+    {{cond.space}}
+    <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/></svg>
+  </b:tag>
+  <b:tag expr:name='!{{view.home}} ? "a" : "span"' class='pgh pgl'>
+    <b:class cond='{{view.home}}' name='pgd'/>
+    <b:attr expr:value='!{{view.home}} ? {{blog2.homepageUrl}} : ""' name='href'/>
+    <b:attr expr:value='!{{view.home}} ? {{msg2.home}} : ""' name='aria-label'/>
+    {{cond.space}}
+    <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'/></svg>
+  </b:tag>
+  <b:tag expr:name='data:olderPageUrl ? "a" : "span"' class='pgl'>
+    <b:class cond='!data:olderPageUrl' name='pgd'/>
+    <b:attr expr:value='data:olderPageUrl ?: ""' name='href'/>
+    <b:attr expr:value='data:olderPageUrl ? {{msg2.olderPosts}} : ""' name='aria-label'/>
+    {{cond.space}}
+    <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/></svg>
+  </b:tag>
+</nav>

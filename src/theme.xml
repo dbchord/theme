@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html b:css='false' b:js='true' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='{{cond.html.dir}}' expr:lang='{{cond.html.lang}}' xmlns='{{cond.html.xmlns}}' xmlns:b='{{cond.html.xmlns:b}}' xmlns:data='{{cond.html.xmlns:data}}' xmlns:expr='{{cond.html.xmlns:expr}}'>
+<b:attr name='xmlns' value=''/>
+<b:attr name='xmlns:b' value=''/>
+<b:attr name='xmlns:data' value=''/>
+<b:attr name='xmlns:expr' value=''/>
+<b:attr cond='{{view.mobile}}' name='amp' value='{{cond.html.mobile}}'/>
+<b:attr cond='{{view.index}}' name='prefix' value='{{cond.html.index}}'/>
+<b:attr cond='{{view.single}}' name='prefix' value='{{cond.html.single}}'/>
+{{cond.manipulate1}}
+{{cond.space}}
+
+<!-- Meta Header -->
+<b:include name='custom-all-head-content'/>
+
+<!-- Assets -->
+<b:if cond='!{{view.layout}}'>
+  <!-- Main CSS AMP -->
+  <b:if cond='{{view.mobile}}'>
+    <link rel='preconnect' href='https://cdn.ampproject.org' crossorigin='anonymous'/>
+    <style amp-boilerplate='amp-boilerplate'><!--(bake /../dist/encoded/amp.min.css)--></style>
+    <noscript><style amp-boilerplate='amp-boilerplate'><!--(bake /../dist/encoded/amp-noscript.min.css)--></style></noscript>
+  </b:if>
+
+  <!-- Main CSS -->
+  <b:include data='{ name: "css_main" }' name='assets'/>
+
+  <!-- Main JavaScript AMP -->
+  <b:if cond='{{view.mobile}}'>
+    <script async='async' src='https://cdn.ampproject.org/v0.js'></script>
+    <script async='async' custom-element='amp-form' src='https://cdn.ampproject.org/v0/amp-form-0.1.js'></script>
+  </b:if>
+  <b:else/>
+  <b:comment><b:skin><![CDATA[]]></b:skin></b:comment>
+  <b:template-skin><!--(bake /../dist/encoded/template-skin.min.css)--></b:template-skin>
+</b:if>
+{{cond.manipulate2}}
+{{cond.space}}
+
+<!--(bake template/skip/skip.xml)-->
+
+<!--(bake template/header/header.xml)-->
+
+<!--(bake template/main/main.xml)-->
+
+<!--(bake template/footer/footer.xml)-->
+
+<!-- Main Javascript -->
+<b:include cond='!{{view.layout}}' data='{ name: "js_main" }' name='assets'/>
+
+<!--(bake template/default/default.xml)-->
+{{cond.manipulate3}}
+</html>

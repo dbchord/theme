@@ -1,0 +1,40 @@
+<b:loop values='data:posts' var='post'>
+  <article class='pa'>
+    <!-- Header -->
+    <header class='ph'>
+      <!-- Title -->
+      <h1 class='pt'>
+        {{cond.space}}
+        <b:if cond='{{view.pageId }} in [{{page.basic}}]'>
+          <b:eval expr='{{cond.title}}'/>
+          <b:else/>
+          <b:with value='{{cond.title}}' var='title'>
+            <b:eval expr='{{cond.chord.title}}'/>
+          </b:with>
+        </b:if>
+      </h1>
+    </header>
+    <!-- Back Language  -->
+    <b:include name='back-language'/>
+    <!-- Body -->
+    <b:if cond='{{view.pageId }} in [{{page.basic}}]'>
+      <div class='pb'>
+        <b:class cond='!{{cond.body-2}}' name='pbt sm smd'/>
+        {{cond.space}}
+        <b:eval expr='{{cond.body}}'/>
+      </div>
+      <b:else/>
+      <b:if cond='{{cond.body-2}}'>
+        <ul class='lg'>
+          {{cond.space}}
+          <data:post.body/>
+        </ul>
+        <b:else/>
+        <div class='pb pbt sm smd'>
+          {{cond.space}}
+          {{msg.theresNothingHere}}
+        </div>
+      </b:if>
+    </b:if>
+  </article>
+</b:loop>

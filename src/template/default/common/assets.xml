@@ -1,0 +1,17 @@
+<b:includable id='assets'>
+  <!-- Main CSS  -->
+  <b:if cond='data:name == "css_main"'>
+    <style>
+      <b:attr cond='{{view.mobile}}' name='amp-custom' value='amp-custom'/>
+      {{cond.space}}
+      <!--(bake /../dist/encoded/main.min.css)-->
+    </style>
+  </b:if>
+  <!-- Main JavaScript -->
+  <b:if cond='data:name == "js_main" and !{{view.mobile}}'>
+    <script>
+      {{cond.space}}
+      <!--(bake /../dist/encoded/main.min.js)-->
+    </script>
+  </b:if>
+</b:includable>

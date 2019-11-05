@@ -1,0 +1,11 @@
+<footer class='ft' id='footer'>
+  <div class='con'>
+    <div class='fti'>
+      <b:section class='fts' id='fts' showaddelement='no'>
+        <!--(bake widgets/LinkList1.xml)-->
+        <!--(bake widgets/PageList2.xml)-->
+      </b:section>
+      <p class='ftt'>&#169; Copyright 2019 - <a expr:href='data:blog.homepageUrl' expr:aria-label='data:messages.home'><data:blog.title/></a></p>
+    </div>
+  </div>
+</footer>

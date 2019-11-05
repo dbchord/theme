@@ -1,0 +1,40 @@
+<b:widget id='PageList2' locked='true' title='Footer' type='PageList' visible='true'>
+  <b:widget-settings>
+    <b:widget-setting name='pageListJson'>
+      <![CDATA[ <!--(bake /../dist/json/footer.min.json)--> ]]>
+    </b:widget-setting>
+    <b:widget-setting name='homeTitle'><b:message name='messages.home'/></b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main'>
+    <b:include name='content'/>
+  </b:includable>
+  <b:includable id='content'>
+    <ul class='fn'>
+      <b:if cond='{{cond.lang}}'>
+        <b:loop values='data:links limit 5' var='link'>
+          <li class='fnpl'>
+            <a class='fnpa' expr:href='data:link.href' expr:aria-label='data:link.title'>
+              <b:class cond='data:link.isCurrentPage' name='ac'/>
+              {{cond.space}}
+              <data:link.title/>
+            </a>
+          </li>
+        </b:loop>
+        <b:else/>
+        <b:loop values='data:links offset 5' var='link'>
+          <li class='fnpl'>
+            <a class='fnpa' expr:href='data:link.href' expr:aria-label='data:link.title'>
+              <b:class cond='data:link.isCurrentPage' name='ac'/>
+              {{cond.space}}
+              <data:link.title/>
+            </a>
+          </li>
+        </b:loop>
+      </b:if>
+    </ul>
+  </b:includable>
+  <b:includable id='overflowButton'/>
+  <b:includable id='overflowablePageList'/>
+  <b:includable id='pageLink'/>
+  <b:includable id='pageList'/>
+</b:widget>

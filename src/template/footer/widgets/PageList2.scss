@@ -1,0 +1,51 @@
+//
+// Footer Nav Page List
+//
+
+// Usages
+// ----------------------------------------------------
+// fnpl = footer nav page list
+// fnpa = footer nav page href (a)
+// ----------------------------------------------------
+
+// fnpl = footer nav page list
+.fnpl {
+  margin: .25rem;
+}
+
+// fnpa = footer nav page href (a)
+.fnpa {
+  display: block;
+  padding: .25rem .5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: $primary-light;
+  border-radius: .25rem;
+
+  // ac = active
+  &.ac {
+    color: $primary-light;
+    background-color: #3e3e3e;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary-dark;
+    background-color: $primary-light;
+  }
+}
+
+//
+// Responsive
+//
+
+@media (min-width: 768px) {
+  .fnpl {
+    margin: 0;
+    &:not(:first-child):not(:last-child) {
+      margin-right: .25rem;
+      margin-left: .25rem;
+    }
+  }
+}

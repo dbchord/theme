@@ -1,0 +1,59 @@
+//
+// Header Navigatin Class
+//
+
+// Usages
+// ----------------------------------------------------
+// hdn = header nav
+// hdni = header nav item
+// hdnl = header nav link
+// ----------------------------------------------------
+
+// hdn = header nav
+.hdn {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 0 .5rem;
+  margin: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  list-style: none;
+}
+
+// hdni = header nav item
+.hdni {
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+
+// hdnl = header nav link
+.hdnl {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #cecece;
+  text-align: center;
+
+  // ac = active
+  &:hover,
+  &:focus,
+  &.ac {
+    color: #fff;
+  }
+}
+
+@media (min-width: 768px) {
+  // hdn = header nav
+  .hdn {
+    padding: 0;
+  }
+
+  // hdni = header nav item
+  .hdni {
+    &:first-child {
+      margin-left: 1rem;
+    }
+  }
+}

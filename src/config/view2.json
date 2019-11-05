@@ -1,0 +1,22 @@
+{
+  "postId": "<data:view.postId/>",
+  "pageId": "<data:view.pageId/>",
+  "type": "<data:view.type/>",
+  "title": "<data:view.title/>",
+  "description": "<data:view.description/>",
+  "image": "<data:view.featuredImage/>",
+  "url": "<data:view.url/>",
+  "urlCanonical": "<data:view.url.canonical/>",
+  "search": {
+    "query": "<data:view.search.query/>",
+    "label": "<data:view.search.label/>",
+    "results": "<data:view.search.resultsMessage/>",
+    "resultsHtml": "<data:view.search.resultsMessageHtml/>"
+  },
+  "archiveMsg": {
+    "range": "<data:view.archive.rangeMessage/>",
+    "day": "<data:view.archive.day/>",
+    "month": "<data:view.archive.month/>",
+    "year": "<data:view.archive.year/>"
+  }
+}

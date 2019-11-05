@@ -1,0 +1,44 @@
+//
+// Pager
+//
+
+// Usages
+// ----------------------------------------------------
+// pg = pager
+// pgl = pager link
+// ----------------------------------------------------
+
+// pg = pager
+.pg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: .5rem auto;
+}
+
+// pgl = pager links
+.pgl {
+  position: relative;
+  display: block;
+  padding: .25rem .5rem;
+  line-height: .25;
+  text-align: center;
+  border: $list-group-border-color;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $primary-light;
+  }
+
+  // pgd = disable
+  &.pgd {
+    cursor: not-allowed;
+    background-color: $primary-light;
+  }
+
+  // pgh = page home
+  &.pgh {
+    margin: 0 .5rem;
+  }
+}

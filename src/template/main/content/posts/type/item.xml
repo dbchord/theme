@@ -1,0 +1,33 @@
+<b:loop values='data:posts' var='post'>
+  <article class='pa'>
+    <b:with value='{{cond.title}}' var='title'>
+      <!-- Header -->
+      <header class='ph'>
+        <!-- Title -->
+        <h1 class='pt'>
+          {{cond.space}}
+          <b:eval expr='{{cond.chord.title}}'/>
+        </h1>
+      </header>
+      <!-- Body -->
+      <b:if cond='{{cond.body-2}}'>
+        <div class='pb'>
+          <b:include name='chord-image' data='data:title'/>
+          <!-- Back Language  -->
+          <b:include name='back-language'/>
+          <section class='pbh'>
+            <b:include name='chord-intro' data='data:title'/>
+            <b:include name='chord-intro-list'/>
+            <b:include name='chord-button'/>
+          </section>
+          <b:include name='chord-notice' data='data:title'/>
+          <data:post.body/>
+        </div>
+        <b:else/>
+        <!-- Back Language  -->
+        <b:include name='back-language'/>
+        <div class='pb pbt sm smd'>{{msg.theresNothingHere}}</div>
+      </b:if>
+    </b:with>
+  </article>
+</b:loop>

@@ -1,0 +1,88 @@
+//
+// Header class
+//
+
+// Usages
+// ----------------------------------------------------
+// hd = header
+// hdi = header item
+// hdt = header title
+// hdt = header link
+// hds = header section / b:section
+// ----------------------------------------------------
+
+// hd = header
+.hd {
+
+  // con = container
+  .con {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: $primary-dark;
+    border-bottom: .1rem solid #ff0202;
+  }
+}
+
+// hdi = header item
+.hdi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
+}
+
+// hdt = header title
+.hdt {
+  max-width: 100%;
+  margin: 1rem 0;
+  overflow: hidden;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+// hdt = header link
+.hdl {
+  color: #cecece;
+  text-decoration: none;
+
+  // ac = active
+  &:hover,
+  &:focus,
+  &.ac {
+    color: #fff;
+  }
+}
+
+// hds = header section / b:section
+.hds {
+  max-width: 100%;
+  // height: 4rem;
+  // padding-top: .75rem;
+  // padding-bottom: .75rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+//
+// Responsive
+//
+
+@media (min-width: 768px) {
+  .hdi {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+  }
+  .hdt {
+    flex: 0 0 auto;
+    width: auto;
+    margin: 0;
+  }
+  .hds {
+    margin: 0;
+  }
+}

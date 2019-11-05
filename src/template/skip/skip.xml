@@ -1,0 +1,3 @@
+<a class='skl' href='#main-content' id='skip' expr:aria-label='data:messages.skipToMainContent'>
+  {{msg.skipToMainContent}}
+</a>

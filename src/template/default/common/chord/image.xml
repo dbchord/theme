@@ -1,0 +1,8 @@
+<b:if cond='!{{view.mobile}}'>
+  <figure class='pbi'>
+    <img class='lazy' id='post-image' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAQAAACx6dw/AAAAC0lEQVR42mNkAAMAAA4AAjOwv9wAAAAASUVORK5CYII=' data-src='https://cdn.statically.io/gh/dbchord/webp-old-c-1110x370_3-6/master/30001-35000/31001-31500/a-better-son-daughter-acoustic.webp'/>
+    <figcaption class='pbic'>
+      <b:eval expr='{{cond.chord.title-2}}'/>
+    </figcaption>
+  </figure>
+</b:if>

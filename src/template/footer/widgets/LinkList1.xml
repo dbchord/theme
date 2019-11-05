@@ -1,0 +1,26 @@
+<b:widget id='LinkList1' locked='true' title='Social Account' type='LinkList' visible='true'>
+  <b:widget-settings>
+    <b:widget-setting name='sorting'>NONE</b:widget-setting>
+    <b:widget-setting name='text-0'>Facebook</b:widget-setting>
+    <b:widget-setting name='link-0'>https://facebook.com/{{config.facebook.username}}</b:widget-setting>
+    <b:widget-setting name='text-1'>Twitter</b:widget-setting>
+    <b:widget-setting name='link-1'>https://twitter.com/{{config.twitter.username}}</b:widget-setting>
+    <b:widget-setting name='text-2'>Pinterest</b:widget-setting>
+    <b:widget-setting name='link-2'>https://pinterest.com/{{config.pinterest.username}}</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main'>
+    <b:include name='content'/>
+  </b:includable>
+  <b:includable id='content'>
+    <ul class='fn'>
+      <b:loop values='data:links' var='link'>
+        <li class='fnl'>
+          <a expr:href='data:link.target' target='_blank' rel='noopener nofollow' expr:aria-label='"Follow Us on " + data:link.name'>
+            {{cond.space}}
+            <data:link.name/>
+          </a>
+        </li>
+      </b:loop>
+    </ul>
+  </b:includable>
+</b:widget>

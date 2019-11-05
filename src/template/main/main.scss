@@ -1,0 +1,87 @@
+//
+// Base class
+//
+
+// Usages
+// ----------------------------------------------------
+// mc = main content
+// mci = main content inner
+// mcb = main content blog
+// mcbs = main content blog section
+// mcs = main content sidebar
+// mcss = main content sidebar section
+// ----------------------------------------------------
+
+// mc = main content
+.mc {
+  .con {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: #fffad0;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, .28);
+  }
+}
+
+// mci = main content inner
+.mci {
+  padding: 0;
+}
+
+// mcb = main content blog
+.mcb {
+  height: 100%;
+  padding: 0;
+}
+
+// mcbs = main content blog section
+
+// mcs = main content sidebar
+.mcs {
+  height: 100%;
+  padding: .5rem 0 0;
+}
+
+// mcss = main content sidebar section
+.mcss .widget {
+  padding: 0 .5rem;
+  margin-bottom: 1rem;
+  border-radius: .25rem;
+
+  // Title
+  > .tl {
+    margin: .75rem auto .5rem;
+    font-size: $post-title;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: center;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+
+    > .tll {
+      margin-top: 2.5rem;
+    }
+  }
+
+  // Content
+  > .widget-content {
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+//
+// Responsive
+//
+
+@media (min-width: 768px) {
+  .mc {
+    .con {
+      padding: .5rem;
+    }
+  }
+}

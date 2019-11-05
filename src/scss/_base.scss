@@ -1,0 +1,231 @@
+// stylelint-disable property-no-vendor-prefix, selector-no-qualifying-type
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif; // 2
+  line-height: 1.15; // 3
+  -webkit-text-size-adjust: 100%; // 4
+  -webkit-tap-highlight-color: rgba($black, 0); // 5
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+//
+// Body
+//
+
+body {
+  margin: 0;
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  font-weight: $body-font-weight;
+  line-height: $body-line-height;
+  color: $body-color;
+  text-align: left;
+  background-color: $body-bg;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  background-color: transparent; // Remove the gray background on active links in IE 10.
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    outline: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+h2 {
+  font-size: $h2-font-size;
+}
+h3 {
+  font-size: $h3-font-size;
+}
+h4 {
+  font-size: $h4-font-size;
+}
+h5 {
+  font-size: $h5-font-size;
+}
+h6 {
+  font-size: $h6-font-size;
+}
+
+/* Prevents img without src to appear */
+img:not([src]) {
+  display: none;
+  visibility: hidden;
+}
+// img[data-src],
+// img[data-srcset] {
+//   display: block;
+//   min-height: 1px;
+// }
+
+// Always hide an element with the `hidden` HTML attribute (from PureCSS).
+// Needed for proper display in IE 10-.
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+
+//
+// Tooltip Class
+//
+
+// Usages
+// ----------------------------------------------------
+// data-tip-1 = tooltip top
+// data-tip-2 = tooltip bottom
+// data-tip-3 = tooltip left
+// data-tip-4 = tooltip right
+// ----------------------------------------------------
+
+[data-tip-1]:hover,
+[data-tip-2]:hover,
+[data-tip-3]:hover,
+[data-tip-4]:hover {
+  position: relative;
+}
+
+[data-tip-1]:hover::after,
+[data-tip-2]:hover::after,
+[data-tip-3]:hover::after,
+[data-tip-4]:hover::after {
+  all: initial;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-bottom: .25rem;
+  content: "";
+  border-color: $primary-light;
+  border-top: .5rem solid $primary-dark;
+  border-right: .5rem solid transparent;
+  border-left: .5rem solid transparent;
+  transform: translate(-50%, 0);
+}
+
+[data-tip-2]:hover::after {
+  top: 100%;
+  bottom: auto;
+  margin-top: .25rem;
+  margin-bottom: 0;
+  margin-left: -1rem;
+  transform: rotate(180deg) translate(-50%, 0);
+}
+
+[data-tip-3]:hover::after {
+  top: 50%;
+  right: 100%;
+  bottom: auto;
+  left: auto;
+  margin-top: -.25rem;
+  margin-right: -.25rem;
+  margin-bottom: 0;
+  transform: rotate(-90deg) translate(0, -50%);
+}
+
+[data-tip-4]:hover::after {
+  top: 50%;
+  bottom: auto;
+  left: 100%;
+  margin-top: -.25rem;
+  margin-bottom: 0;
+  margin-left: -.25rem;
+  transform: rotate(90deg) translate(0, -50%);
+}
+
+[data-tip-1]:hover::before,
+[data-tip-2]:hover::before,
+[data-tip-3]:hover::before,
+[data-tip-4]:hover::before {
+  all: initial;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  display: inline-block;
+  padding: .5rem;
+  margin-bottom: .75rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: $primary-light;
+  text-align: center;
+  content: attr(data-tip-1);
+  background-color: $primary-dark;
+  border-radius: .25rem;
+  transform: translate(-50%, 0);
+}
+
+[data-tip-2]:hover::before {
+  top: 100%;
+  bottom: auto;
+  margin-top: .75rem;
+  margin-bottom: 0;
+  content: attr(data-tip-2);
+}
+
+[data-tip-3]:hover::before {
+  top: 50%;
+  right: 100%;
+  bottom: auto;
+  left: auto;
+  margin-right: .75rem;
+  margin-bottom: 0;
+  content: attr(data-tip-3);
+  transform: translate(0, -50%);
+}
+
+[data-tip-4]:hover::before {
+  top: 50%;
+  bottom: auto;
+  left: 100%;
+  margin-bottom: 0;
+  margin-left: .75rem;
+  content: attr(data-tip-4);
+  transform: translate(0, -50%);
+}

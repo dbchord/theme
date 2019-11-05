@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "stylelint-config-twbs-bootstrap/scss"
+  ],
+  "rules": {
+    "property-blacklist": []
+  },
+  "ignoreFiles": ["**/*.xml","dist/**"]
+}

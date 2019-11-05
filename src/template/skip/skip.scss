@@ -1,0 +1,26 @@
+//
+// Skip navigation
+//
+
+.skl {
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  text-align: center;
+  white-space: nowrap;
+  border: 0;
+
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}

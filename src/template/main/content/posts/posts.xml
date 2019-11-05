@@ -1,0 +1,21 @@
+<b:if cond='{{view.error}}'>
+  <!-- Error page  -->
+  <div class='sm smd' role='alert'>
+    <data:navMessage/>
+  </div>
+  <b:else/>
+  <div class='ps' id='posts'>
+    <!-- MultipleItems  -->
+    <b:if cond='{{view.index}}'>
+      <!--(bake type/index.xml)-->
+    </b:if>
+    <!-- Item page  -->
+    <b:if cond='{{view.post}}'>
+      <!--(bake type/item.xml)-->
+    </b:if>
+    <!-- Static page  -->
+    <b:if cond='{{view.page}}'>
+      <!--(bake type/static.xml)-->
+    </b:if>
+  </div>
+</b:if>

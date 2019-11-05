@@ -1,0 +1,91 @@
+//
+// Base class
+//
+
+// .s-f {}
+
+//
+// Layout
+//
+
+.s-f-r {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+.s-f-c {
+  position: relative;
+  flex-basis: 0;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 5px;
+  // padding-left: 5px;
+}
+.s-f-c-a {
+  position: relative;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+//
+// Input
+//
+
+.s-f-i {
+  display: block;
+  width: 100%;
+  padding: .5rem .75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $primary-dark;
+  background-color: #fffad0;
+  background-clip: padding-box;
+  border: $list-group-border-color;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+  &:focus {
+    outline: 0;
+    // border-color: lighten($primary, 25%);
+    // box-shadow: 0 0 0 .2rem rgba($primary, .25);
+  }
+}
+
+//
+// Submit
+//
+
+.s-f-s {
+  display: block;
+  padding: .5rem .75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  background-color: $primary;
+  border: 1px solid darken($primary, 2.5%);
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($primary, 15%);
+    border-color: darken($primary, 17.5%);
+  }
+
+  svg {
+    vertical-align: top;
+  }
+}

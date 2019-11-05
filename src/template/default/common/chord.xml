@@ -1,0 +1,15 @@
+<b:includable id='chord-image' var='title'>
+  <!--(bake chord/image.xml)-->
+</b:includable>
+<b:includable id='chord-intro' var='title'>
+  <!--(bake chord/intro.xml)-->
+</b:includable>
+<b:includable id='chord-intro-list'>
+  <!--(bake chord/intro-list.xml)-->
+</b:includable>
+<b:includable id='chord-button'>
+  <!--(bake chord/button.xml)-->
+</b:includable>
+<b:includable id='chord-notice' var='title'>
+  <!--(bake chord/notice.xml)-->
+</b:includable>

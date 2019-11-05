@@ -1,0 +1,35 @@
+{
+  "postId": "data:view.postId",
+  "pageId": "data:view.pageId",
+  "type": "data:view.type",
+  "title": "data:view.title",
+  "description": "data:view.description",
+  "image": "data:view.featuredImage",
+  "url": "data:view.url",
+  "urlCanonical": "data:view.url.canonical",
+  "mobile": "data:blog.isMobileRequest",
+  "layout": "data:view.isLayoutMode",
+  "home": "data:view.isHomepage",
+  "label": "data:view.search.label",
+  "query": "data:view.search.query",
+  "dafault": "data:view.search and !data:view.search.label and !data:view.search.query",
+  "archive": "data:view.isArchive",
+  "post": "data:view.isPost",
+  "page": "data:view.isPage",
+  "error": "data:view.isError",
+  "index": "data:view.isMultipleItems",
+  "single": "data:view.isSingleItem",
+  "preview": "data:view.isPreview",
+  "search": {
+    "query": "data:view.search.query",
+    "label": "data:view.search.label",
+    "results": "data:view.search.resultsMessage",
+    "resultsHtml": "data:view.search.resultsMessageHtml"
+  },
+  "archiveMsg": {
+    "range": "data:view.archive.rangeMessage",
+    "day": "data:view.archive.day",
+    "month": "data:view.archive.month",
+    "year": "data:view.archive.year"
+  }
+}

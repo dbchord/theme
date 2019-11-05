@@ -1,0 +1,96 @@
+<b:if cond='data:view.type == "item"'>
+  <meta content='article' property='og:type'/>
+  <b:else/>
+  <meta content='website' property='og:type'/>
+</b:if>
+<meta expr:content='data:blog.title' property='og:site_name'/>
+<meta content='{{config.facebook.app_id}}' property='fb:app_id'/>
+<meta content='{{config.facebook.admins}}' property='fb:admins'/>
+<meta content='{{config.facebook.pages}}' property='fb:pages'/>
+<meta expr:content='data:view.url.canonical' property='og:url'/>
+<meta content='1200' property='og:image:width'/>
+<meta content='630' property='og:image:height'/>
+
+<!-- Homepage  -->
+<b:if cond='{{view.home}}'>
+  <meta expr:content='data:blog.title' property='og:title'/>
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' property='og:description'/>
+    <b:else/>
+    <meta expr:content='data:blog.title' property='og:description'/>
+  </b:if>
+  <meta content='{{config.opengraph.image}}' property='og:image'/>
+</b:if>
+
+<!-- Item page  -->
+<b:if cond='{{view.post}}'>
+  <meta expr:content='({{cond.title}}) + " | " + data:blog.title' property='og:title'/>
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' property='og:description'/>
+    <b:else/>
+    <meta expr:content='data:blog.pageName ? data:blog.pageName : data:blog.title' property='og:description'/>
+  </b:if>
+  <b:if cond='data:view.featuredImage'>
+    <meta expr:content='resizeImage(data:view.featuredImage, 1200, "1200:630")' property='og:image'/>
+    <b:elseif cond='data:blog.postImageUrl'/>
+    <meta expr:content='resizeImage(data:blog.postImageUrl, 1200, "1200:630")' property='og:image'/>
+    <b:else/>
+    <meta content='{{config.opengraph.image}}' property='og:image'/>
+  </b:if>
+</b:if>
+
+<!-- Static page  -->
+<b:if cond='{{view.page}}'>
+  <meta expr:content='({{cond.title}}) + " | " + data:blog.title' property='og:title'/>
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' property='og:description'/>
+    <b:else/>
+    <meta expr:content='data:blog.pageName ? data:blog.pageName : data:blog.title' property='og:description'/>
+  </b:if>
+  <b:if cond='data:view.featuredImage'>
+    <meta expr:content='resizeImage(data:view.featuredImage, 1200, "1200:630")' property='og:image'/>
+    <b:elseif cond='data:blog.postImageUrl'/>
+    <meta expr:content='resizeImage(data:blog.postImageUrl, 1200, "1200:630")' property='og:image'/>
+    <b:else/>
+    <meta content='{{config.opengraph.image}}' property='og:image'/>
+  </b:if>
+</b:if>
+
+<!-- Search (label) page  -->
+<b:if cond='{{view.label}}'>
+  <meta expr:content='data:blog.pageName + " | " + data:blog.title' property='og:title'/>
+  <meta expr:content='data:view.search.resultsMessage' property='og:description'/>
+  <meta content='{{config.opengraph.image}}' property='og:image'/>
+</b:if>
+
+<!-- Search (query) page  -->
+<b:if cond='{{view.query}}'>
+  <meta expr:content='data:view.search.resultsMessage + " | " + data:blog.title' property='og:title'/>
+  <meta expr:content='data:view.search.resultsMessage' property='og:description'/>
+  <meta content='{{config.opengraph.image}}' property='og:image'/>
+</b:if>
+
+<!-- Search (default) page  -->
+<b:if cond='{{view.dafault}}'>
+  <meta expr:content='data:blog.title' property='og:title'/>
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' property='og:description'/>
+    <b:else/>
+    <meta expr:content='data:blog.title' property='og:description'/>
+  </b:if>
+  <meta content='{{config.opengraph.image}}' property='og:image'/>
+</b:if>
+
+<!-- Archive page  -->
+<b:if cond='{{view.archive}}'>
+  <meta expr:content='data:view.archive.rangeMessage + " | " + data:blog.title' property='og:title'/>
+  <meta expr:content='data:view.archive.rangeMessage' property='og:description'/>
+  <meta content='{{config.opengraph.image}}' property='og:image'/>
+</b:if>
+
+<!-- Error page  -->
+<b:if cond='{{view.error}}'>
+  <meta expr:content='"404 | " + data:blog.title' property='og:title'/>
+  <meta content='404' property='og:description'/>
+  <meta content='{{config.opengraph.image}}' property='og:image'/>
+</b:if>

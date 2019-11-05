@@ -1,0 +1,14 @@
+<b:defaultmarkups>
+  <b:defaultmarkup type='Common'>
+    <!--(bake common/header.xml)-->
+    <!--(bake common/assets.xml)-->
+    <!--(bake common/chord.xml)-->
+    <!--(bake common/language.xml)-->
+  </b:defaultmarkup>
+  <b:defaultmarkup type='BlogSearch'>
+    <!--(bake widgets/BlogSearch.xml)-->
+  </b:defaultmarkup>
+  <b:defaultmarkup type='PopularPosts'>
+    <!--(bake widgets/PopularPosts.xml)-->
+  </b:defaultmarkup>
+</b:defaultmarkups>
