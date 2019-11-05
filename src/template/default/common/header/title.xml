@@ -10,7 +10,7 @@
 
 <!-- Search (query) page  -->
 <b:if cond='{{view.query}}'>
-  <title><data:view.search.resultsMessage/> | <data:blog.title/></title>
+  <title><b:eval expr='{{cond.chord.search}}'/> {{view2.search.query}} | <data:blog.title/></title>
 </b:if>
 
 <!-- Search (default) page  -->

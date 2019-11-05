@@ -13,7 +13,7 @@
 
     <!-- Search (query) page  -->
     <b:if cond='{{view.query}}'>
-      <h2 class='pt'>{{view2.search.query}}</h2>
+      <h2 class='pt'><b:eval expr='{{cond.chord.search}}'/>: {{view2.search.query}}</h2>
     </b:if>
 
     <!-- Search (default) page  -->
