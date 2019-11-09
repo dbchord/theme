@@ -31,7 +31,8 @@
   },
   "post": {
     "title": "data:post.title ? data:post.title : data:messages.noTitle",
-    "url": "data:post.link ?: data:post.url"
+    "url": "data:post.link ?: data:post.url",
+    "details": "{title: data:title, labels: data:post.labels}"
   },
   "chord": {
     "title": "data:blog.localeUnderscoreDelimited == \"id\" ? \"Kunci Gitar \" + data:title : \"Guitar Chords \" + data:title",

@@ -1,0 +1,11 @@
+<b:with value='data:post.labels' var='label'>
+  <b:if cond='{{cond.lang}}'>
+    <p>Judul: <data:post.title/></p>
+    <p>Kategori 1: <b:eval expr='data:label[0].name'/></p>
+    <p>Kategori 2: <b:eval expr='data:label[2].name'/></p>
+    <b:else/>
+    <p>Title: <data:post.title/></p>
+    <p>Category 1: <b:eval expr='data:label[1].name'/></p>
+    <p>Category 2: <b:eval expr='data:label[3].name'/></p>
+  </b:if>
+</b:with>

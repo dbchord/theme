@@ -13,3 +13,6 @@
 <b:includable id='chord-notice' var='title'>
   <!--(bake chord/notice.xml)-->
 </b:includable>
+<b:includable id='chord-details' var='post'>
+  <!--(bake chord/details.xml)-->
+</b:includable>
