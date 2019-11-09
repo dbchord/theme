@@ -22,6 +22,10 @@
     "index": "og: http://ogp.me/ns# website: http://ogp.me/ns/website# fb: http://ogp.me/ns/fb#",
     "single": "og: http://ogp.me/ns# article: http://ogp.me/ns/article# fb: http://ogp.me/ns/fb#"
   },
+  "link": {
+    "web": "data:view.url params {m: 0}",
+    "mobile": "data:view.url params {m: 1}"
+  },
   "index": {
     "header": "data:view.isHomepage ? \"h2\" : \"h1\""
   },
