@@ -34,5 +34,9 @@
     "title-2": "data:blog.localeUnderscoreDelimited == \"id\" ? \"Chord Gitar \" + data:title : \"Song Chords \" + data:title",
     "title-3": "data:blog.localeUnderscoreDelimited == \"id\" ? \"Chord Kunci Gitar \" + data:title : \"Song Guitar Chords \" + data:title",
     "search": "data:blog.localeUnderscoreDelimited == \"id\" ? \"Pencarian Kunci Gitar \" : data:messages.search + \" Guitar Chords \""
+  },
+  "notice": {
+    "id": "\"Kunci Gitar \" + data:title + \" Versi Original\"",
+    "en": "\"Guitar Chords \" + data:title + \" Original Version\""
   }
 }
