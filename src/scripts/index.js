@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
-var LazyLoad = require('vanilla-lazyload');
+var LazyLoad = require("vanilla-lazyload");
 
-new LazyLoad({elements_selector: ".lazy", threshold: 0});
+new LazyLoad({ elements_selector: ".lazy", threshold: 0 });
