@@ -3,9 +3,13 @@
     <p>Judul: <data:post.title/></p>
     <p>Kategori 1: <b:eval expr='data:label[0].name'/></p>
     <p>Kategori 2: <b:eval expr='data:label[2].name'/></p>
+    <p>Diposting pada: <b:eval expr='data:post.date format "EEEE, dd MMMM yyyy HH:mm"'/></p>
+    <p>Diperbaharui pada: <b:eval expr='data:post.lastUpdated format "EEEE, dd MMMM yyyy HH:mm"'/></p>
     <b:else/>
     <p>Title: <data:post.title/></p>
     <p>Category 1: <b:eval expr='data:label[1].name'/></p>
     <p>Category 2: <b:eval expr='data:label[3].name'/></p>
+    <p>Published: <b:eval expr='data:post.date format "EEEE, MMMM dd yyyy hh:mm aaaa"'/></p>
+    <p>Modified: <b:eval expr='data:post.lastUpdated format "EEEE, MMMM dd yyyy hh:mm aaaa"'/></p>
   </b:if>
 </b:with>

@@ -22,7 +22,7 @@
           </section>
           <b:include name='chord-notice' data='data:title'/>
           <data:post.body/>
-          <b:include name='chord-details' data='{{cond.post.details}}'/>
+          <b:include name='chord-details' data='post'/>
         </div>
         <b:else/>
         <!-- Back Language  -->
