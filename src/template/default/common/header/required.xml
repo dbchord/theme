@@ -1,8 +1,8 @@
 <meta charset='utf-8'/>
 <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'/>
-<link crossorigin='crossorigin' href='https://i.ytimg.com' rel='preconnect'/>
-<link crossorigin='crossorigin' href='https://cdn.jsdelivr.net' rel='preconnect'/>
-<link crossorigin='crossorigin' href='https://cdn.statically.io' rel='preconnect'/>
-<link crossorigin='crossorigin' href='https://cdn.ampproject.org' rel='preconnect'/>
-<link crossorigin='crossorigin' href='https://storage.googleapis.com' rel='preconnect'/>
-<link crossorigin='crossorigin' href='https://www.googletagmanager.com' rel='preconnect'/>
+<link crossorigin='crossorigin' href='https://i.ytimg.com' rel='preconnect dns-prefetch'/>
+<link crossorigin='crossorigin' href='https://cdn.jsdelivr.net' rel='preconnect dns-prefetch'/>
+<link crossorigin='crossorigin' href='https://cdn.statically.io' rel='preconnect dns-prefetch'/>
+<link crossorigin='crossorigin' href='https://cdn.ampproject.org' rel='preconnect dns-prefetch'/>
+<link crossorigin='crossorigin' href='https://storage.googleapis.com' rel='preconnect dns-prefetch'/>
+<link crossorigin='crossorigin' href='https://www.googletagmanager.com' rel='preconnect dns-prefetch'/>
