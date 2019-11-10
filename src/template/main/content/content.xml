@@ -1,34 +1,36 @@
 <b:widget id='Blog1' locked='true' title='' type='Blog' visible='true'>
   <b:widget-settings>
     <!-- Label (string) -->
-    <b:widget-setting name='authorLabel'>{{setting.authorLabel}}</b:widget-setting>
-    <b:widget-setting name='commentLabel'>{{setting.commentLabel}}</b:widget-setting>
-    <b:widget-setting name='timestampLabel'>{{setting.timestampLabel}}</b:widget-setting>
-    <b:widget-setting name='reactionsLabel'>{{setting.reactionsLabel}}</b:widget-setting>
-    <b:widget-setting name='postLocationLabel'>{{setting.postLocationLabel}}</b:widget-setting>
-    <b:widget-setting name='postLabelsLabel'>{{setting.postLabelsLabel}}</b:widget-setting>
+    <b:widget-setting name='authorLabel'>{{blogSetting.authorLabel}}</b:widget-setting>
+    <b:widget-setting name='commentLabel'>{{blogSetting.commentLabel}}</b:widget-setting>
+    <b:widget-setting name='timestampLabel'>{{blogSetting.timestampLabel}}</b:widget-setting>
+    <b:widget-setting name='reactionsLabel'>{{blogSetting.reactionsLabel}}</b:widget-setting>
+    <b:widget-setting name='postLocationLabel'>{{blogSetting.postLocationLabel}}</b:widget-setting>
+    <b:widget-setting name='postLabelsLabel'>{{blogSetting.postLabelsLabel}}</b:widget-setting>
     <!-- Activation (true/false) -->
-    <b:widget-setting name='disableGooglePlusShare'>{{setting.disableGooglePlusShare}}</b:widget-setting>
-    <b:widget-setting name='showAuthor'>{{setting.showAuthor}}</b:widget-setting>
-    <b:widget-setting name='showAuthorProfile'>{{setting.showAuthorProfile}}</b:widget-setting>
-    <b:widget-setting name='showBacklinks'>{{setting.showBacklinks}}</b:widget-setting>
-    <b:widget-setting name='showCommentLink'>{{setting.showCommentLink}}</b:widget-setting>
-    <b:widget-setting name='showDateHeader'>{{setting.showDateHeader}}</b:widget-setting>
-    <b:widget-setting name='showInlineAds'>{{setting.showInlineAds}}</b:widget-setting>
-    <b:widget-setting name='showLabels'>{{setting.showLabels}}</b:widget-setting>
-    <b:widget-setting name='showLocation'>{{setting.showLocation}}</b:widget-setting>
-    <b:widget-setting name='showReactions'>{{setting.showReactions}}</b:widget-setting>
-    <b:widget-setting name='showShareButtons'>{{setting.showShareButtons}}</b:widget-setting>
-    <b:widget-setting name='showTimestamp'>{{setting.showTimestamp}}</b:widget-setting>
+    <b:widget-setting name='disableGooglePlusShare'>{{blogSetting.disableGooglePlusShare}}</b:widget-setting>
+    <b:widget-setting name='showAuthor'>{{blogSetting.showAuthor}}</b:widget-setting>
+    <b:widget-setting name='showAuthorProfile'>{{blogSetting.showAuthorProfile}}</b:widget-setting>
+    <b:widget-setting name='showBacklinks'>{{blogSetting.showBacklinks}}</b:widget-setting>
+    <b:widget-setting name='showCommentLink'>{{blogSetting.showCommentLink}}</b:widget-setting>
+    <b:widget-setting name='showDateHeader'>{{blogSetting.showDateHeader}}</b:widget-setting>
+    <b:widget-setting name='showInlineAds'>{{blogSetting.showInlineAds}}</b:widget-setting>
+    <b:widget-setting name='showLabels'>{{blogSetting.showLabels}}</b:widget-setting>
+    <b:widget-setting name='showLocation'>{{blogSetting.showLocation}}</b:widget-setting>
+    <b:widget-setting name='showReactions'>{{blogSetting.showReactions}}</b:widget-setting>
+    <b:widget-setting name='showShareButtons'>{{blogSetting.showShareButtons}}</b:widget-setting>
+    <b:widget-setting name='showTimestamp'>{{blogSetting.showTimestamp}}</b:widget-setting>
     <!-- Adsense (mix) -->
-    <b:widget-setting name='postsPerAd'>{{setting.postsPerAd}}</b:widget-setting>
-    <b:widget-setting name='style.layout'>{{setting.style.layout}}</b:widget-setting>
-    <b:widget-setting name='style.unittype'>{{setting.style.unittype}}</b:widget-setting>
-    <b:widget-setting name='style.bgcolor'>{{setting.style.bgcolor}}</b:widget-setting>
-    <b:widget-setting name='style.bordercolor'>{{setting.style.bordercolor}}</b:widget-setting>
-    <b:widget-setting name='style.urlcolor'>{{setting.style.urlcolor}}</b:widget-setting>
-    <b:widget-setting name='style.linkcolor'>{{setting.style.linkcolor}}</b:widget-setting>
-    <b:widget-setting name='style.textcolor'>{{setting.style.textcolor}}</b:widget-setting>
+    <b:widget-setting name='postsPerAd'>{{blogSetting.postsPerAd}}</b:widget-setting>
+    <b:widget-setting name='style.layout'>{{blogSetting.style.layout}}</b:widget-setting>
+    <b:widget-setting name='style.unittype'>{{blogSetting.style.unittype}}</b:widget-setting>
+    <b:widget-setting name='style.bgcolor'>{{blogSetting.style.bgcolor}}</b:widget-setting>
+    <b:widget-setting name='style.bordercolor'>{{blogSetting.style.bordercolor}}</b:widget-setting>
+    <b:widget-setting name='style.urlcolor'>{{blogSetting.style.urlcolor}}</b:widget-setting>
+    <b:widget-setting name='style.linkcolor'>{{blogSetting.style.linkcolor}}</b:widget-setting>
+    <b:widget-setting name='style.textcolor'>{{blogSetting.style.textcolor}}</b:widget-setting>
+    <!-- other -->
+    <b:widget-setting name='backlinksLabel'>{{blogSetting.backlinksLabel}}</b:widget-setting>
   </b:widget-settings>
   <b:includable id='main'>
     <!--(bake posts/posts.xml)-->

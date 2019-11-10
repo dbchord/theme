@@ -17,14 +17,15 @@
   "showReactions": false,
   "showShareButtons": false,
   "showTimestamp": false,
-  "postsPerAd": 0,
+  "postsPerAd": 1,
   "style": {
-    "layout": "",
-    "unittype": "",
-    "bgcolor": "",
-    "bordercolor": "",
-    "urlcolor": "",
-    "linkcolor": "",
-    "textcolor": ""
-  }
+    "layout": "1x1",
+    "unittype": "TextAndImage",
+    "bgcolor": "#ffffff",
+    "bordercolor": "#ffffff",
+    "urlcolor": "#008000",
+    "linkcolor": "#0000ff",
+    "textcolor": "#000000"
+  },
+  "backlinksLabel": ""
 }

@@ -56,6 +56,10 @@ module.exports = grunt => {
               alias: "config"
             },
             {
+              path: "src/config/blogSetting.json",
+              alias: "blogSetting"
+            },
+            {
               path: "package.json",
               alias: "pkg"
             }
