@@ -1,34 +1,34 @@
 <b:widget id='Blog1' locked='true' title='' type='Blog' visible='true'>
   <b:widget-settings>
     <!-- Label (string) -->
-    <b:widget-setting name='authorLabel'></b:widget-setting>
-    <b:widget-setting name='commentLabel'></b:widget-setting>
-    <b:widget-setting name='timestampLabel'></b:widget-setting>
-    <b:widget-setting name='reactionsLabel'></b:widget-setting>
-    <b:widget-setting name='postLocationLabel'></b:widget-setting>
-    <b:widget-setting name='postLabelsLabel'></b:widget-setting>
+    <b:widget-setting name='authorLabel'>{{setting.authorLabel}}</b:widget-setting>
+    <b:widget-setting name='commentLabel'>{{setting.commentLabel}}</b:widget-setting>
+    <b:widget-setting name='timestampLabel'>{{setting.timestampLabel}}</b:widget-setting>
+    <b:widget-setting name='reactionsLabel'>{{setting.reactionsLabel}}</b:widget-setting>
+    <b:widget-setting name='postLocationLabel'>{{setting.postLocationLabel}}</b:widget-setting>
+    <b:widget-setting name='postLabelsLabel'>{{setting.postLabelsLabel}}</b:widget-setting>
     <!-- Activation (true/false) -->
-    <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
-    <b:widget-setting name='showAuthor'>false</b:widget-setting>
-    <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
-    <b:widget-setting name='showBacklinks'>false</b:widget-setting>
-    <b:widget-setting name='showCommentLink'>false</b:widget-setting>
-    <b:widget-setting name='showDateHeader'>false</b:widget-setting>
-    <b:widget-setting name='showInlineAds'>false</b:widget-setting>
-    <b:widget-setting name='showLabels'>false</b:widget-setting>
-    <b:widget-setting name='showLocation'>false</b:widget-setting>
-    <b:widget-setting name='showReactions'>false</b:widget-setting>
-    <b:widget-setting name='showShareButtons'>false</b:widget-setting>
-    <b:widget-setting name='showTimestamp'>false</b:widget-setting>
+    <b:widget-setting name='disableGooglePlusShare'>{{setting.disableGooglePlusShare}}</b:widget-setting>
+    <b:widget-setting name='showAuthor'>{{setting.showAuthor}}</b:widget-setting>
+    <b:widget-setting name='showAuthorProfile'>{{setting.showAuthorProfile}}</b:widget-setting>
+    <b:widget-setting name='showBacklinks'>{{setting.showBacklinks}}</b:widget-setting>
+    <b:widget-setting name='showCommentLink'>{{setting.showCommentLink}}</b:widget-setting>
+    <b:widget-setting name='showDateHeader'>{{setting.showDateHeader}}</b:widget-setting>
+    <b:widget-setting name='showInlineAds'>{{setting.showInlineAds}}</b:widget-setting>
+    <b:widget-setting name='showLabels'>{{setting.showLabels}}</b:widget-setting>
+    <b:widget-setting name='showLocation'>{{setting.showLocation}}</b:widget-setting>
+    <b:widget-setting name='showReactions'>{{setting.showReactions}}</b:widget-setting>
+    <b:widget-setting name='showShareButtons'>{{setting.showShareButtons}}</b:widget-setting>
+    <b:widget-setting name='showTimestamp'>{{setting.showTimestamp}}</b:widget-setting>
     <!-- Adsense (mix) -->
-    <b:widget-setting name='postsPerAd'>0</b:widget-setting>
-    <b:widget-setting name='style.layout'></b:widget-setting>
-    <b:widget-setting name='style.unittype'></b:widget-setting>
-    <b:widget-setting name='style.bgcolor'></b:widget-setting>
-    <b:widget-setting name='style.bordercolor'></b:widget-setting>
-    <b:widget-setting name='style.urlcolor'></b:widget-setting>
-    <b:widget-setting name='style.linkcolor'></b:widget-setting>
-    <b:widget-setting name='style.textcolor'></b:widget-setting>
+    <b:widget-setting name='postsPerAd'>{{setting.postsPerAd}}</b:widget-setting>
+    <b:widget-setting name='style.layout'>{{setting.style.layout}}</b:widget-setting>
+    <b:widget-setting name='style.unittype'>{{setting.style.unittype}}</b:widget-setting>
+    <b:widget-setting name='style.bgcolor'>{{setting.style.bgcolor}}</b:widget-setting>
+    <b:widget-setting name='style.bordercolor'>{{setting.style.bordercolor}}</b:widget-setting>
+    <b:widget-setting name='style.urlcolor'>{{setting.style.urlcolor}}</b:widget-setting>
+    <b:widget-setting name='style.linkcolor'>{{setting.style.linkcolor}}</b:widget-setting>
+    <b:widget-setting name='style.textcolor'>{{setting.style.textcolor}}</b:widget-setting>
   </b:widget-settings>
   <b:includable id='main'>
     <!--(bake posts/posts.xml)-->

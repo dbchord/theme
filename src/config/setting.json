@@ -1,0 +1,30 @@
+{
+  "authorLabel": "",
+  "commentLabel": "",
+  "timestampLabel": "",
+  "reactionsLabel": "",
+  "postLocationLabel": "",
+  "postLabelsLabel": "",
+  "disableGooglePlusShare": true,
+  "showAuthor": false,
+  "showAuthorProfile": false,
+  "showBacklinks": false,
+  "showCommentLink": false,
+  "showDateHeader": false,
+  "showInlineAds": false,
+  "showLabels": false,
+  "showLocation": false,
+  "showReactions": false,
+  "showShareButtons": false,
+  "showTimestamp": false,
+  "postsPerAd": 0,
+  "style": {
+    "layout": "",
+    "unittype": "",
+    "bgcolor": "",
+    "bordercolor": "",
+    "urlcolor": "",
+    "linkcolor": "",
+    "textcolor": ""
+  }
+}
