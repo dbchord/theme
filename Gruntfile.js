@@ -89,6 +89,12 @@ module.exports = grunt => {
           {
             expand: true,
             cwd: "src/",
+            src: "theme-db.xml",
+            dest: "dist"
+          },
+          {
+            expand: true,
+            cwd: "src/",
             src: "empty.xml",
             dest: "dist"
           }
@@ -261,7 +267,9 @@ module.exports = grunt => {
           "dist/css/amp-noscript.min.css",
           "dist/css/skin.min.css",
           "dist/css/template-skin.min.css",
-          "dist/css/main.min.css"
+          "dist/css/main.min.css",
+          "dist/css/reset.min.css",
+          "dist/css/theme-db.min.css",
           // "dist/js/main-obfuscated.min.js",
         ],
         dest: "dist/encoded/"
@@ -274,7 +282,8 @@ module.exports = grunt => {
           preserveComments: false
         },
         files: {
-          "dist/theme-min.xml": "dist/theme.xml"
+          "dist/theme.min.xml": "dist/theme.xml",
+          "dist/theme-db.min.xml": "dist/theme-db.xml",
         }
       }
     },

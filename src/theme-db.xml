@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:js='false' b:layoutsVersion='3' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+{{cond.manipulate1}}
+{{cond.space}}
+<title><data:view.title/></title>
+<b:comment><b:section id='0'/><b:skin><![CDATA[]]></b:skin></b:comment>
+<style>
+<!--(bake /../dist/encoded/reset.min.css)-->
+<!--(bake /../dist/encoded/theme-db.min.css)-->
+</style>
+{{cond.manipulate2}}
+{{cond.space}}
+
+<!--(bake theme/db/blog.xml)-->
+{{cond.manipulate3}}
+</html>
