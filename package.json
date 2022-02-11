@@ -45,7 +45,7 @@
     "grunt-stylelint": "^0.11.1",
     "grunt-xmlmin": "^0.1.8",
     "load-grunt-tasks": "^5.1.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "path": "^0.12.7",
     "stylelint": "^10.1.0",
     "stylelint-config-twbs-bootstrap": "^0.3.1",
